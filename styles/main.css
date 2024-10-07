@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.head_main {
+    max-width: 80%; /* Chiều rộng tối đa giống với hộp task */
+    margin: 0 auto; /* Căn giữa */
+    background-color: #4CAF50; /* Màu nền cho header */
+    color: white; /* Màu chữ */
+    padding: 15px 20px; /* Padding cho header */
+    border-radius: 8px; /* Bo góc cho header */
+    margin-bottom: 20px; /* Khoảng cách dưới header */
+    display: flex; /* Sử dụng flexbox để căn giữa tiêu đề và nút đăng xuất */
+    justify-content: space-between; /* Căn giữa tiêu đề và nút đăng xuất */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.task {
+    max-width: 80%; /* Chiếm 80% chiều rộng màn hình */
+    margin: 0 auto; /* Căn giữa */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    text-align: left;
+    color: rgb(0, 53, 27);
+}
+
+.add {
+    display: flex; /* Sử dụng flexbox để căn chỉnh input */
+    margin-bottom: 20px; /* Khoảng cách dưới box thêm task */
+}
+
+.add form {
+    width: 100%; /* Đảm bảo form chiếm 100% chiều rộng */
+    display: flex; /* Sử dụng flexbox cho form */
+}
+
+.add input[type="text"] {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    padding: 10px; /* Padding cho input */
+    margin-right: 10px; /* Khoảng cách giữa hai input */
+    border: 1px solid #ccc; /* Viền cho input */
+    border-radius: 4px; /* Bo góc cho input */
+}
+
+#submit_add {
+    padding: 10px 15px; /* Padding cho nút submit */
+    background-color: #4CAF50; /* Màu nền nút submit */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    border-radius: 4px; /* Bo góc cho nút submit */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+}
+
+#submit_add:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
+
+table {
+    width: 100%; /* Đảm bảo bảng chiếm 100% chiều rộng của box */
+    border-collapse: collapse; /* Gộp các viền lại để nhìn gọn gàng hơn */
+    margin-top: 20px; /* Khoảng cách trên bảng */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Cài đặt chiều rộng cho các cột trong bảng */
+th:nth-child(1), td:nth-child(1) {
+    width: 10%; /* STT */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 80%; /* Tiêu đề */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 10%; /* Hành động */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    .task {
+        max-width: 100%; /* Đảm bảo box chiếm toàn bộ màn hình trên thiết bị nhỏ */
+    }
+
+    .head_main {
+        max-width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng trên thiết bị nhỏ */
+    }
+
+    .add input[type="text"] {
+        margin-right: 5px; /* Khoảng cách giảm cho thiết bị nhỏ */
+    }
+
+    th, td {
+        font-size: 14px; /* Giảm kích thước chữ cho thiết bị nhỏ */
+    }
+
+    #submit_add {
+        padding: 6px 8px; /* Giảm padding cho nút submit trên thiết bị nhỏ */
+    }
+}
+
+a {
+    color: #fff;
+}
+.error-message {
+    color: red; /* Màu đỏ cho thông báo lỗi */
+    margin-top: 10px; /* Khoảng cách trên thông báo */
+    text-align: center;
+
+}
